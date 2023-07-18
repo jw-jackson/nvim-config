@@ -1,0 +1,40 @@
+[WARN  2023年07月06日 星期四 17时44分35秒 11125519159319] .../site/pack/packer/start/packer.nvim/lua/packer/clean.lua:79: Cleaning cancelled!
+[ERROR 2023年07月06日 星期四 17时44分35秒 11125519260480] .../site/pack/packer/start/packer.nvim/lua/packer/async.lua:20: Error in coroutine: ...e/nvim/site/pack/packer/start/packer.nvim/lua/packer.lua:627: attempt to index local 'display_win' (a nil value)
+[WARN  2023年07月06日 星期四 17时47分37秒 11307640278083] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月06日 星期四 17时58分07秒 11937449727659] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月06日 星期四 17时59分16秒 12006814064054] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[ERROR 2023年07月06日 星期四 18时48分37秒 14967970099997] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:83: Failed spawning command: git because ENOENT: no such file or directory
+[WARN  2023年07月06日 星期四 18时50分09秒 15059665688940] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月06日 星期四 18时52分01秒 15171220711573] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月06日 星期四 19时03分47秒 15877425875653] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月06日 星期四 22时15分00秒 27350569840967] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月06日 星期四 22时19分07秒 27597529114331] ...ite/pack/packer/start/packer.nvim/lua/packer/display.lua:837: nvim-treesitter/nvim-treesitter wasn't updated; can't revert!
+[WARN  2023年07月07日 星期五 08时34分20秒 658371672948] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月07日 星期五 08时34分20秒 658379503378] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月07日 星期五 08时34分20秒 658381647302] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月07日 星期五 08时35分44秒 742450002031] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月07日 星期五 08时35分44秒 742450763212] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月07日 星期五 08时35分44秒 742451182211] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时39分14秒 78256813318] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时39分14秒 78260973697] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时39分14秒 78263980021] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时40分17秒 141412751307] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时40分17秒 141413548306] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时40分17秒 141416978513] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时41分19秒 203193471780] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时41分19秒 203193997683] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时41分19秒 203194708935] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时49分28秒 692825638605] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时49分28秒 692830816092] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时49分28秒 692835372515] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时52分00秒 844538466684] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时52分00秒 844539380209] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时52分00秒 844542445035] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时53分03秒 907995782181] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时53分03秒 907996304230] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 13时53分03秒 907996657162] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 14时00分31秒 1355918893338] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 14时00分31秒 1355919764230] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 14时23分45秒 696869834966] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 14时25分01秒 772778291343] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!
+[WARN  2023年07月15日 星期六 14时26分19秒 850990077842] ...m/site/pack/packer/start/packer.nvim/lua/packer/jobs.lua:94: Killing git due to timeout!

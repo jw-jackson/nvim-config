@@ -1,2 +1,12 @@
 require('core.options')
-require('plugins.plugins-setup')
+require('core.keybindings')
+
+require('plugins.packer')
+require('plugins.lualine')
+require('plugins.nvim-tree')
+require('plugins.treesitter')
+require('plugins.bufferline')
+require('plugins.lsp')
+-- require('plugins.vim-airline')
+require('plugins.dap')
+require('plugins.dapui')
