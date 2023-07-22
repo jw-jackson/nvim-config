@@ -5,7 +5,6 @@ local opts = { noremap = true, silent = false}
 local map = vim.api.nvim_set_keymap
 
 
-vim.g.mapleader=" "
 
 
 -- nvim tree
@@ -48,5 +47,3 @@ map('n', '<C-h>', ':BufferLineMovePrev<CR>', opts);
 map('n', '<C-l>', ':BufferLineMoveNext<CR>', opts);
 
 map('n', '<c-w>', ':bdelete<CR>', opts);
-
-

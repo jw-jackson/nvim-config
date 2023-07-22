@@ -1,0 +1,10 @@
+# 存在 ~ 目录下的为默认配置文件
+# 存在 nvim/ 下的是其 ln ，是为了备份
+AlignTrailingComments: true
+AllowShortFunctionsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+BreakBeforeBinaryOperators: false
+IndentWidth: 4
+SortIncludes: false
+NamespaceIndentation: All

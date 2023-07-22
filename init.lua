@@ -1,12 +1,22 @@
 require('core.options')
-require('core.keybindings')
 
-require('plugins.packer')
-require('plugins.lualine')
-require('plugins.nvim-tree')
-require('plugins.treesitter')
-require('plugins.bufferline')
-require('plugins.lsp')
--- require('plugins.vim-airline')
-require('plugins.dap')
-require('plugins.dapui')
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+vim.g.mapleader = " "
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
+
+
+--require("lazy").setup({nvim_tree_plugin},{})
+require("lazy").setup("plugins")
+
+require('core.keybindings')
+--require('nvim-tree').setup()

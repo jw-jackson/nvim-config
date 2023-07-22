@@ -33,7 +33,7 @@ vim.opt.smartcase = true
 -- 许多 nvim 主题需要
 -- vim.opt.termguicolors = true
 
--- 
+--
 -- vim.opt.signcolumn = "yes"
 
 -- 鼠标启用
@@ -43,11 +43,3 @@ vim.opt.mouse:append("a")
 -- 默认新窗口
 -- vim.opt.splitright = true
 -- vim.opt.splitlow = true
-
--- theme
-vim.cmd[[colorscheme tokyonight-storm]]
-
-
-
-
-

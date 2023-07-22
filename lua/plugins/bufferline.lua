@@ -1,17 +1,12 @@
-vim.opt.termguicolors = true
+return
+{
+    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons',
 
-require("bufferline").setup {
-
-    options =
-    {
-        offsets = {
-            {
-                filetype = "NvimTree",
-                --text = "File Explorer" ,
-                text = "Nvim-Tree",
-                text_align = "left",
-                separator = true
-            }
-        },
+    config = function()
+    vim.opt.termguicolors = true
+    require("bufferline").setup{}
+    end,
     }
+
+
 }
