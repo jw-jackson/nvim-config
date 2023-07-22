@@ -39,11 +39,3 @@ map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opts)
 
 
 -- Bufferline
-map("n", "<A-b>",':BufferLineCycleNext<CR>', opts);
-map("n", "<Leader>bc", ':BufferLinePickClose<CR>', opts);
-map('n', '<Leader>bp', ':BufferLineTogglePin<CR>', opts);
-
-map('n', '<C-h>', ':BufferLineMovePrev<CR>', opts);
-map('n', '<C-l>', ':BufferLineMoveNext<CR>', opts);
-
-map('n', '<c-w>', ':bdelete<CR>', opts);
