@@ -47,7 +47,7 @@ return {
 
                 -- Mappings.
                 -- See `:help vim.lsp.*` for documentation on any of the below functions
-                local bufopts = { noremap = true, silent = true, buffer = bufnr }
+                local bufopts = { noremap = true, silent = false, buffer = bufnr }
                 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
                 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
                 vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -152,6 +152,15 @@ return {
 
                 -- 快捷键
                 --mapping = require 'keybindings'.cmp(cmp),
+                mapping = cmp.mapping.preset.insert({
+                  ['<C-j>'] = cmp.mapping.select_next_item(),
+                  ['<C-k>'] = cmp.mapping.select_prev_item(),
+                  ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+                  ['<C-f>'] = cmp.mapping.scroll_docs(4),
+                  --['<C-I>'] = cmp.mapping.complete(),
+                  ['<C-e>'] = cmp.mapping.abort(),
+                  ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+                }),
                 -- 使用lspkind-nvim显示类型图标
                 formatting = {
                     format = lspkind.cmp_format({
