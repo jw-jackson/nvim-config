@@ -19,4 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 require('core.keybindings')
+require('core.dap')
+require('core.dapui')
 --require('nvim-tree').setup()
