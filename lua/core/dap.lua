@@ -4,14 +4,16 @@
 
 local dap = require('dap')
 
+local home = os.getenv("HOME")
+
 -- C
 dap.adapters.codelldb = {
   type = 'server',
   port = "${port}",
   executable = {
     -- !!! 此处必须用全路径
-    command = '/home/jackson/.local/share/nvim/mason/bin/codelldb',
-    -- command = '~/.local/share/nvim/mason/bin/codelldb',
+    command = home..'/.local/share/nvim/mason/bin/codelldb',
+    -- command = '/home/jackson/.local/share/nvim/mason/bin/codelldb',
     args = {"--port", "${port}"},
     -- On windows you may have to uncomment this:
     -- detached = false,
