@@ -20,5 +20,5 @@ require("lazy").setup("plugins")
 
 require('core.keybindings')
 require('core.dap')
-require('core.dapui')
+-- require('core.dapui')
 --require('nvim-tree').setup()
