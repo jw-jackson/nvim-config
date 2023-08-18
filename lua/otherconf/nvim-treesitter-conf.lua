@@ -1,6 +1,4 @@
-local configs = require("nvim-treesitter.configs")
-
-configs.setup({
+require("nvim-treesitter.configs").setup({
     ensure_installed = { "c", "lua", "markdown" },
     sync_install = false,
     highlight = { enable = true },

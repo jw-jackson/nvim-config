@@ -1,17 +1,10 @@
 local opts = { noremap = true, silent = false}
 -- noremap 不会重新映射
 -- silent 不会输出多余信息
-
 local map = vim.api.nvim_set_keymap
 
 
-
-
--- nvim tree
-map('n', '<A-t>', ':NvimTreeToggle<CR>', opts)
-
 -- test vim.api.nvim_set_keymap('n', '<Leader>h', ':help<CR>', opts);
---
 
 map('n', '<Leader>wv', ':vsp<CR>', opts);
 map('n', '<Leader>ws',':sp<CR>', opts);
@@ -38,4 +31,3 @@ map("t", "<A-k>", [[ <C-\><C-N><C-w>k ]], opts)
 map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opts)
 
 
--- Bufferline
