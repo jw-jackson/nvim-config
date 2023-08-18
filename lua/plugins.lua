@@ -16,10 +16,6 @@ return
             require('dapconf.nvim-dap-conf')
         end,
         lazy = false,
-        dependencies =
-        {
-            "rcarriga/nvim-dap-ui",
-        },
     },
 
     {
@@ -96,9 +92,22 @@ return
     },
     { "lukas-reineke/indent-blankline.nvim",
         config = function()
-                require('otherconf.indent-blankline-conf')
+            require('otherconf.indent-blankline-conf')
         end
 
 
     },
+    {
+        'hrsh7th/nvim-cmp',
+        config = function()
+            require('cmpconf.nvim-cmp-conf')
+        end
+
+    },
+    {
+        'hrsh7th/cmp-path',
+    },
+    {
+        'hrsh7th/cmp-nvim-lsp'
+    }
 }

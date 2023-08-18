@@ -13,12 +13,6 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
-
-
---require("lazy").setup({nvim_tree_plugin},{})
 require("lazy").setup("plugins")
-
 require('basicconf.keybindings')
---require('core.dap')
--- require('core.dapui')
---require('nvim-tree').setup()
+
