@@ -1,4 +1,4 @@
-require('core.options')
+require('basicconf.options')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 vim.g.mapleader = " "
@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 --require("lazy").setup({nvim_tree_plugin},{})
 require("lazy").setup("plugins")
 
-require('core.keybindings')
-require('core.dap')
+require('basicconf.keybindings')
+--require('core.dap')
 -- require('core.dapui')
 --require('nvim-tree').setup()
