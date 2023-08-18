@@ -3,7 +3,7 @@ return
     {
         'akinsho/bufferline.nvim',
         version = "*",
-        dependencies = 'nvim-tree/nvim-web-devicons',
+        --dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
             require('otherconf.bufferline-conf')
         end,
@@ -16,10 +16,6 @@ return
             require('dapconf.nvim-dap-conf')
         end,
         lazy = false,
-        dependencies =
-        {
-            "rcarriga/nvim-dap-ui",
-        },
     },
 
     {
@@ -55,7 +51,7 @@ return
     {
         "nvim-lualine/lualine.nvim",
         dependencies = {
-            'nvim-tree/nvim-web-devicons'
+            --'nvim-tree/nvim-web-devicons'
         },
         config = function()
 
@@ -64,7 +60,7 @@ return
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
+        --dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             require('otherconf.nvim-tree-conf')
         end
