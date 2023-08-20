@@ -1,0 +1,13 @@
+[
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-o",
+            "test.o",
+            "test.c"
+        ],
+        "directory": "/home/jackson/.config/nvim",
+        "file": "test.c"
+    }
+]

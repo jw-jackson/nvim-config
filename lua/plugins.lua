@@ -90,7 +90,8 @@ return
             require('telecsopeconf.telescope-conf')
         end
     },
-    { "lukas-reineke/indent-blankline.nvim",
+    {
+        "lukas-reineke/indent-blankline.nvim",
         config = function()
             require('otherconf.indent-blankline-conf')
         end
@@ -109,5 +110,17 @@ return
     },
     {
         'hrsh7th/cmp-nvim-lsp'
+    },
+    {
+        'L3MON4D3/LuaSnip'
+    },
+    {
+        'saadparwaiz1/cmp_luasnip'
+    },
+    {
+        'hrsh7th/cmp-buffer'
+    },
+    {
+        'hrsh7th/cmp-cmdline'
     }
 }

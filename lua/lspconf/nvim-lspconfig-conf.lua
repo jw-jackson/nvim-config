@@ -1,3 +1,7 @@
+vim.lsp.set_log_level(vim.log.levels.INFO)
+
+
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 --keymapping*******************************************************************
@@ -86,4 +90,5 @@ require 'lspconfig'.lua_ls.setup {
 
 
 require 'lspconfig'.marksman.setup {}
+require'lspconfig'.bashls.setup{}
 --*************************************************************************************************
