@@ -122,5 +122,8 @@ return
     },
     {
         'hrsh7th/cmp-cmdline'
+    },
+    {
+        "Borwe/wasm_nvim"
     }
 }
