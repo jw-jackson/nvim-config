@@ -14,7 +14,7 @@ cmp.setup {
             option = { show_autosnippets = true }
         },
         { name = 'buffer' },
-        { name = 'cmdline' }
+        --{ name = 'cmdline' }
     }),
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -26,23 +26,23 @@ cmp.setup {
 }
 
 -- `/` cmdline setup.
-cmp.setup.cmdline('/', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-        { name = 'buffer' }
-    }
-})
+--cmp.setup.cmdline('/', {
+    --mapping = cmp.mapping.preset.cmdline(),
+    --sources = {
+        --{ name = 'buffer' }
+    --}
+--})
 -- `:` cmdline setup.
-cmp.setup.cmdline(':', {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
-        { name = 'path' }
-    }, {
-        {
-            name = 'cmdline',
-            option = {
-                ignore_cmds = { 'Man', '!' }
-            }
-        }
-    })
-})
+--cmp.setup.cmdline(':', {
+    --mapping = cmp.mapping.preset.cmdline(),
+    --sources = cmp.config.sources({
+        --{ name = 'path' }
+    --}, {
+        --{
+            --name = 'cmdline',
+            --option = {
+                --ignore_cmds = { 'Man', '!' }
+            --}
+        --}
+    --})
+----})

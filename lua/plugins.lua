@@ -24,7 +24,7 @@ return
         config = function()
             require('dapconf.nvim-dap-ui-conf')
         end,
-        lazy = true,
+        lazy = false,
     },
     {
         "williamboman/mason.nvim",
@@ -125,5 +125,59 @@ return
     },
     {
         "Borwe/wasm_nvim"
+    },
+
+    {
+        "jackMort/ChatGPT.nvim",
+        event = "VeryLazy",
+        config = function()
+            vim.env.OPENAI_API_KEY = "sk-RNycOuFn91F914abA706T3BLbKFJ75fdA60EDF7A495c9738"
+            --vim.env.OPENAI_API_KEY = "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"
+            vim.env.OPENAI_API_HOST = "aigptx.top"
+            --api.ohmygpt
+            --cn2us02.opapi.win
+            --cfwus02.opapi.win
+            -- sk-vGgVAN4s398D6BdC9eCcT3BlBkFJe5Ff551d552d409C8A20
+            -- sk-yPFSDAUv203f0e807672T3BlbKFJ3904Aa14B25143B493Fd
+            vim.keymap.set('n', '<C-a>', "<cmd>ChatGPT<CR>", {})
+            require("chatgpt").setup({
+                yank_register = "\"",
+                openai_params = {
+                    --model = "gpt-4",
+                    --model = "gpt-3.5-turbo-16k-0613",
+                    model = "gpt-4-0613",
+                    --model = "gpt-3.5-turbo-16k",
+                    frequency_penalty = 0,
+                    presence_penalty = 0,
+                    max_tokens = 1000,
+                    temperature = 0.2,
+                    top_p = 1,
+                    n = 1,
+                },
+                popup_window = {
+                    border = {
+                        highlight = "FloatBorder",
+                        style = "rounded",
+                        text = {
+                            top = " note ",
+                        },
+                    },
+                },
+                popup_input = {
+                    border = {
+                        text = {
+                            top_align = "center",
+                            --top = " Prompt ",
+                            top = " grep ",
+                        },
+                    }
+                }
+            })
+        end,
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim"
+        }
     }
 }

@@ -40,6 +40,7 @@ local common_on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     --vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+    vim.keymap.set('n', '<Leader>f', ':%!clang-format<CR>', bufopts)
 end
 --*************************************************************************************************
 
@@ -61,7 +62,7 @@ require 'lspconfig'.clangd.setup {
     on_attach = function(client, bufnr)
         common_on_attach(client, bufnr)
         { noremap = true, silent = false, buffer = bufnr }
-        vim.keymap.set('n', '<Leader>f', ':%!clang-format-10<CR>', { noremap = true, silent = false, buffer = bufnr })
+        --vim.keymap.set('n', '<Leader>f', ':%!clang-format<CR>', { noremap = true, silent = false, buffer = bufnr })
     end,
     capabilities = capabilities,
     flags = lsp_flags,
@@ -90,5 +91,5 @@ require 'lspconfig'.lua_ls.setup {
 
 
 require 'lspconfig'.marksman.setup {}
-require'lspconfig'.bashls.setup{}
+require 'lspconfig'.bashls.setup {}
 --*************************************************************************************************
