@@ -40,7 +40,10 @@ local common_on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     --vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
-    vim.keymap.set('n', '<Leader>f', ':%!clang-format<CR>', bufopts)
+    --vim.keymap.set('n', '<Leader>f', ':%!clang-format<CR>', bufopts)
+
+    -- lsp 会覆盖tagfunc, 致使只能使用 lsp tag,这样会使用默认tag
+    vim.api.nvim_buf_set_option(bufnr, 'tagfunc', '')
 end
 --*************************************************************************************************
 
@@ -57,39 +60,15 @@ local lsp_flags = {
 
 
 
--- 连接到 clangd 服务器
 require 'lspconfig'.clangd.setup {
     on_attach = function(client, bufnr)
         common_on_attach(client, bufnr)
         { noremap = true, silent = false, buffer = bufnr }
-        --vim.keymap.set('n', '<Leader>f', ':%!clang-format<CR>', { noremap = true, silent = false, buffer = bufnr })
     end,
     capabilities = capabilities,
     flags = lsp_flags,
-}
-
-
--- 连接到 lua_ls 服务器
-require 'lspconfig'.lua_ls.setup {
-    -- solve undefined global 'vim'
-    -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
-    on_attach = function(client, bufnr)
-        common_on_attach(client, bufnr)
-        vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end,
-            { noremap = true, silent = false, buffer = bufnr })
-    end,
-    flags = lsp_flags,
-    capabilities = capabilities,
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' },
-            }
-        }
+    handlers = {
+        ["textDocument/publishDiagnostics"] = function() end,
     },
 }
 
-
-require 'lspconfig'.marksman.setup {}
-require 'lspconfig'.bashls.setup {}
---*************************************************************************************************

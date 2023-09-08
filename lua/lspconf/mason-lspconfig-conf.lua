@@ -4,5 +4,5 @@ require("mason-lspconfig").setup {
     -- 这个 list 在官网可见 server name
     -- clangd 是 C/C++ 的 server name
     -- dap is not support
-    ensure_installed = { "lua_ls", "clangd", "marksman" },
+    ensure_installed = { "lua_ls", "clangd",},
 }
