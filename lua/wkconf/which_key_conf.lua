@@ -71,7 +71,25 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = f
 --map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opts)
 
 
---keymapping*******************************************************************
+
+-- noremap 不会重新映射
+-- silent 不会输出多余信息
+--map('n', '<A-t>', ':NvimTreeToggle<CR>', opts)
+
+-- 快键 < 500 ms生效
+wk.register({
+    ["<leader>n"] = {":NvimTreeToggle<CR>", "NvimTree"},
+})
+wk.register({
+    ["<leader>n"] = {
+        name = "NvimTree",
+        f = {":NvimTreeFindFile<CR>", "NvimTreeFindFile"}
+
+    }
+})
+
+
+--Bufferline
 --[[
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = false }
@@ -82,23 +100,27 @@ map('n', '<Leader>bp', ':BufferLineTogglePin<CR>', opts);
 --map('n', '<C-h>', ':BufferLineMovePrev<CR>', opts);
 --map('n', '<C-l>', ':BufferLineMoveNext<CR>', opts);
 -- map('n', '<c-w>', ':bdelete<CR>', opts);
-wk.register({
-    ["<leader>"] = {
-         = {
-            
-        }
-    }
-
-})
 ]]--
-
-
-
--- noremap 不会重新映射
--- silent 不会输出多余信息
---map('n', '<A-t>', ':NvimTreeToggle<CR>', opts)
 wk.register({
-    ["<leader>n"] = {":NvimTreeToggle<CR>", "NvimTree"},
-    ["<leader>nf"] = {":NvimTreeFindFile<CR>", "NvimTreeFindFile"}
+    ["<A-l>"] = {':BufferLineCycleNext<CR>','BufferLineNext'},
+    ["<A-h>"] = {':BufferLineCyclePrev<CR>','BufferLinePrev'},
+    ["<A-j>"] = {':BufferLineMoveNext<CR>','BufferLineMoveNext'},
+    ["<A-k>"] = {':BufferLineMovePrev<CR>','BufferLineMovePrev'},
 })
+-- fast < 500ms
+wk.register({
+    ["<leader>b"] = {":BufferLinePick<CR>", "BufferLinePick"}
+})
+wk.register({
+    ["<leader>b"] = {
+        name = "BufferLine",
+        c = {":BufferLinePickClose<CR>", "PickClose"},
+        p = {":BufferLineTogglePin<CR>", "TogglePin"},
+        h = {":BufferLineCloseLeft<CR>", "CloseLeft"},
+        l = {":BufferLineCloseRight<CR>", "CloseRight"},
+        o = {":BufferLineCloseOthers<CR>", "CloseOthers"}
+
+    }
+})
+
 
