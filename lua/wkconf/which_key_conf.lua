@@ -1,6 +1,6 @@
 local wk = require("which-key")
 
-
+--Telescope*******************************************************************
 local builtin = require('telescope.builtin')
 wk.register({
   ["<leader>"] = {
@@ -23,32 +23,9 @@ wk.register({
     },
   },
 })
+--Telescope*******************************************************************
 
-
-
-
---[[
-弃用
-改用内置设置
---
-wk.register({
-    ["<leader>"] = {
-        w = {
-            name = "+window",
-            s = {":sp<CR>","split window"},
-            v = {"<cmd>vsp<cr>","vertical split window"}
-        }
-
-    }
-})
---map('n', '<Leader>wv', ':vsp<CR>', opts);
---map('n', '<Leader>ws',':sp<CR>', opts);
-]]--
-
-
-
-
--- Terminal
+--Terminal********************************************************************
 wk.register({
     ["<leader>"] = {
         t = {
@@ -59,6 +36,9 @@ wk.register({
 
     }
 })
+--Terminal*********************************************************************
+
+--NvimTree*********************************************************************
 --local opts = { noremap = true, silent = false}
 -- noremap 不会重新映射
 -- silent 不会输出多余信息
@@ -69,7 +49,6 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = f
 --map("t", "<A-w>j", [[ <C-\><C-N><C-w>j ]], opts)
 --map("t", "<A-k>", [[ <C-\><C-N><C-w>k ]], opts)
 --map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opts)
-
 
 
 -- noremap 不会重新映射
@@ -87,20 +66,9 @@ wk.register({
 
     }
 })
+--NvimTree*********************************************************************
 
-
---Bufferline
---[[
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = false }
-map("n", "<A-b>", ':BufferLineCycleNext<CR>', opts);
-map("n", "<A-B>", ':BufferLineCyclePrev<CR>', opts);
-map("n", "<Leader>bc", ':BufferLinePickClose<CR>', opts);
-map('n', '<Leader>bp', ':BufferLineTogglePin<CR>', opts);
---map('n', '<C-h>', ':BufferLineMovePrev<CR>', opts);
---map('n', '<C-l>', ':BufferLineMoveNext<CR>', opts);
--- map('n', '<c-w>', ':bdelete<CR>', opts);
-]]--
+--BufferLine*******************************************************************
 wk.register({
     ["<A-l>"] = {':BufferLineCycleNext<CR>','BufferLineNext'},
     ["<A-h>"] = {':BufferLineCyclePrev<CR>','BufferLinePrev'},
@@ -122,5 +90,6 @@ wk.register({
 
     }
 })
+--BufferLine********************************************************************
 
 
