@@ -195,5 +195,12 @@ return
         config = function()
             require('wkconf.which_key_conf')
         end
+    },
+    {
+        'simrat39/symbols-outline.nvim',
+        config = function()
+            require('outline.symbols_outline')
+        end
     }
+
 }
