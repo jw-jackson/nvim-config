@@ -8,7 +8,7 @@ return
         end,
     },
 
-
+    --[[
     {
         "mfussenegger/nvim-dap",
         config = function()
@@ -25,6 +25,7 @@ return
         end,
         lazy = false,
     },
+    ]]--
     {
         "williamboman/mason.nvim",
         build = ":MasonUpdate", -- :MasonUpdate updates registry contents
@@ -66,9 +67,10 @@ return
         priority = 1000, -- make sure to load this before all the other start plugins
         config = function()
             -- load the colorscheme here
-            -- vim.cmd([[colorscheme tokyonight]])
+            vim.cmd([[colorscheme tokyonight]])
         end,
     },
+        --[[
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -76,6 +78,7 @@ return
             require('otherconf.nvim-treesitter-conf')
         end
     },
+        ]]--
 
     {
         'nvim-telescope/telescope.nvim',
