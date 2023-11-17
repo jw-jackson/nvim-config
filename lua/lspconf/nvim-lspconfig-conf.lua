@@ -63,6 +63,7 @@ local lsp_flags = {
 require 'lspconfig'.clangd.setup {
     on_attach = function(client, bufnr)
         common_on_attach(client, bufnr)
+        client.server_capabilities.semanticTokensProvider = nil
         -- nvim diff 切换窗口 error 注释掉下面
         --{ noremap = true, silent = false, buffer = bufnr }
     end,
