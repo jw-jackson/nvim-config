@@ -90,14 +90,13 @@ return
             require('telecsopeconf.telescope-conf')
         end
     },
+
     {
         "lukas-reineke/indent-blankline.nvim",
-        config = function()
-            require('otherconf.indent-blankline-conf')
-        end
-
-
+        main = "ibl",
+        opts = {}
     },
+
     {
         'hrsh7th/nvim-cmp',
         config = function()
